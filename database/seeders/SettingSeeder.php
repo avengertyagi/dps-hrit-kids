@@ -18,7 +18,7 @@ class SettingSeeder extends Seeder
             'phone' => '+998 99 999 99 99',
             'email' => 'admin@yopmail.com',
             'facebook' => 'https://www.facebook.com/',
-            'twitter' => 'https://twitter.com/',
+            'instagram' => 'https://instagram.com/',
             'youtube' => 'https://www.youtube.com/',
         ];
         foreach ($settings as $key => $value) {

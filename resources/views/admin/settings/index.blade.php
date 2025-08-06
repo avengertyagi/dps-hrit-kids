@@ -91,6 +91,16 @@
                                                                 placeholder="Youtube">
                                                         </div>
                                                     </div>
+                                                    <div class="row mb-3">
+                                                        <label class="col-md-3 col-form-label" for="instagram">Instagram<code
+                                                                class="text-danger fs-4">*</code></label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" id="instagram" name="instagram"
+                                                                class="form-control"
+                                                                value="{{ $module_data['instagram'] ?? '' }}"
+                                                                placeholder="Instagram">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <ul class="pager wizard mb-0 list-inline">
@@ -153,6 +163,10 @@
             .addField('#youtube', [{
                 rule: 'required',
                 errorMessage: 'The youtube field is required.',
+            }])
+            .addField('#instagram',[{
+                rule: 'required',
+                errorMessage: 'The instagram field is required.',
             }])
             .onSuccess(() => {
                 console.log("Form validated successfully!")

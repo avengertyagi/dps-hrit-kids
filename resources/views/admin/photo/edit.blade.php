@@ -90,6 +90,7 @@
                                         </table>
                                     </div>
                                 </div>
+                                <input type="hidden" name="deleted_ids[]" id="deleted_ids">
                                 <div class="mb-2 row">
                                     <div class="col-md-12 text-end">
                                         <a href="{{ route('photos.index') }}" type="button"
@@ -359,6 +360,16 @@
 
         function deleteImageRow(element) {
             const row = $(element).closest('tr');
+            const imageId = row.find('input[name="image_id[]"]').val();
+            console.log('imageId',imageId);
+            row.find('input[name="delete_image[]"]').val(imageId); if (imageId) {
+            let deletedIds = $('#deleted_ids').val();
+            let deletedArray = deletedIds ? deletedIds.split(',') : [];
+            if (!deletedArray.includes(imageId)) {
+            deletedArray.push(imageId);
+            }
+            $('#deleted_ids').val(deletedArray.join(','));
+            }
             row.fadeOut(500, function() {
                 $(this).remove();
                 const tableContainer = $('#images_table').closest('.table-responsive');

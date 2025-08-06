@@ -25,6 +25,13 @@
                                             value="{{ old('title', $module_data->title ?? '') }}" placeholder="Title" maxlength="50">
                                     </div>
                                     <div class="col-md-6">
+                                        <label class="col-form-label" for="thumbnail_image">Thumbnail Image</label><code
+                                            class="text-danger fs-4">*</code>
+                                        <input type="file" class="form-control" id="thumbnail_image"
+                                            name="thumbnail_image" onchange="thumbnailPreview();">
+                                        <code>Allowed file types: png, jpg, jpeg</code>
+                                    </div>
+                                    <div class="col-md-6">
                                         <label class="col-form-label" for="video">Video</label><code
                                             class="text-danger fs-4">*</code>
                                         <input type="file" class="form-control" id="video" name="video" onchange="videoPreview();"> 
@@ -52,6 +59,7 @@
 @push('js')
     <script>
         let is_video_required = @json($module_data->video ? false : true);
+        let is_thumbanil_required = @json($module_data->thumbnail_image ? false : true);
         const validation = new JustValidate('#videoForm');
         validation
             .addField('#title', [{
@@ -88,6 +96,26 @@
                     errorMessage: 'The title must not start with a space.',
                 }
             ]);
+            if(is_thumbanil_required){
+                 validation.addField('#thumbnail_image', [{
+                    rule: 'minFilesCount',
+                    value: 1,
+                    errorMessage: 'The thumbnail image field is required.',
+                },
+                {
+                    rule: 'files',
+                    value: {
+                        files: {
+                            extensions: ['jpeg', 'jpg', 'png'],
+                            maxSize: 5000000,
+                            minSize: 10000,
+                            types: ['image/jpeg', 'image/jpg', 'image/png'],
+                        },
+                    },
+                    errorMessage: 'Please upload a valid image (JPEG, JPG, PNG) between 10KB and 5MB.',
+                }
+            ]);
+            }
             if(is_video_required){
             validation.addField('#video', [{
                     rule: 'minFilesCount',

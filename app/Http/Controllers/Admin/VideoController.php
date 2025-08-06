@@ -92,6 +92,13 @@ class VideoController extends Controller
             if ($validator->fails()) {
                 return back()->with('error', $validator->errors()->first());
             }
+            if ($request->hasFile('thumbnail_image')) {
+                try {
+                    $thumbnail_image = imageUpload($request->file('thumbnail_image'), 'uploads/video/thumbnail');
+                } catch (\Exception $e) {
+                    return back()->with('error', 'Could not upload your file: ' . $e->getMessage());
+                }
+            }
             if ($request->hasFile('video')) {
                 try {
                     $video = imageUpload($request->file('video'), 'uploads/video');
@@ -101,6 +108,7 @@ class VideoController extends Controller
             }
             Video::create([
                 'title' => $request->title,
+                'thumbnail_image' => $thumbnail_image,
                 'video' => $video,
             ]);
             Cache::forget('videos');
@@ -143,6 +151,17 @@ class VideoController extends Controller
                 return back()->with('error', $validator->errors()->first());
             }
             $video = Video::find($id);
+            if ($request->hasFile('thumbnail_image')) {
+                try {
+                    if ($video->thumbnail_image && File::exists(public_path($video->thumbnail_image))) {
+                        File::delete(public_path($video->thumbnail_image));
+                    }
+                    $thumbnail_image = imageUpload($request->file('thumbnail_image'), 'uploads/photo');
+                    $video->thumbnail_image = $thumbnail_image;
+                } catch (\Exception $e) {
+                    return back()->with('error', 'Could not upload your file: ' . $e->getMessage());
+                }
+            }
             if ($request->hasFile('video')) {
                 try {
                     if ($video->video && File::exists(public_path($video->video))) {

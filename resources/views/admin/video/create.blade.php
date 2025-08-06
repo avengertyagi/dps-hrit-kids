@@ -24,6 +24,13 @@
                                             value="{{ old('title') }}" placeholder="Title" maxlength="50">
                                     </div>
                                     <div class="col-md-6">
+                                        <label class="col-form-label" for="thumbnail_image">Thumbnail Image</label><code
+                                            class="text-danger fs-4">*</code>
+                                        <input type="file" class="form-control" id="thumbnail_image"
+                                            name="thumbnail_image" onchange="thumbnailPreview();">
+                                        <code>Allowed file types: png, jpg, jpeg</code>
+                                    </div>
+                                    <div class="col-md-6">
                                         <label class="col-form-label" for="video">Video</label><code
                                             class="text-danger fs-4">*</code>
                                         <input type="file" class="form-control" id="video" name="video" onchange="videoPreview();"> 
@@ -102,6 +109,24 @@
                         },
                     },
                     errorMessage: 'Please upload a valid video (MP4, MOV, AVI, MKV) between 10KB and 5MB.',
+                }
+            ])
+            .addField('#thumbnail_image', [{
+                    rule: 'minFilesCount',
+                    value: 1,
+                    errorMessage: 'The thumbnail image field is required.',
+                },
+                {
+                    rule: 'files',
+                    value: {
+                        files: {
+                            extensions: ['jpeg', 'jpg', 'png'],
+                            maxSize: 5000000,
+                            minSize: 10000,
+                            types: ['image/jpeg', 'image/jpg', 'image/png'],
+                        },
+                    },
+                    errorMessage: 'Please upload a valid image (JPEG, JPG, PNG) between 10KB and 5MB.',
                 }
             ])
             .onSuccess((event) => {

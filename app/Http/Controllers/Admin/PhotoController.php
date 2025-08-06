@@ -186,7 +186,7 @@ class PhotoController extends Controller
                     if ($photo->thumbnail_image && File::exists(public_path($photo->thumbnail_image))) {
                         File::delete(public_path($photo->thumbnail_image));
                     }
-                    $thumbnail_image = imageUpload($request->file('thumbnail_image'), 'uploads/photo');
+                    $thumbnail_image = imageUpload($request->file('thumbnail_image'), 'uploads/video/thumbnail');
                     $photo->thumbnail_image = $thumbnail_image;
                 } catch (\Exception $e) {
                     return back()->with('error', 'Could not upload your file: ' . $e->getMessage());
@@ -227,6 +227,18 @@ class PhotoController extends Controller
                     collect($imageData)->chunk(10)->each(function ($chunk) {
                         PhotoImage::insert($chunk->toArray());
                     });
+                }
+            }
+            if (!empty($request->deleted_ids)) {
+                $deletedIds = explode(',', $request->deleted_ids[0]);
+                foreach ($deletedIds as $deleteId) {
+                    $photoImage = PhotoImage::find($deleteId);
+                    if ($photoImage) {
+                        if (File::exists(public_path($photoImage->image))) {
+                            File::delete(public_path($photoImage->image));
+                        }
+                        $photoImage->delete();
+                    }
                 }
             }
             DB::commit();

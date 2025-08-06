@@ -48,8 +48,7 @@
                                             alt="img not found!">
                                     </div>
                                     <div class="bd-gallery-icon">
-                                        <a href="{{ route('photos.details', $photo->slug ?? '') }}" class="popup-image"><i
-                                                class="flaticon-eye"></i></a>
+                                        <i class="flaticon-eye"></i>
                                     </div>
                                     <div class="img-title">
                                         <h5 class="text-white">{{ $photo->title ?? '' }}</h5>

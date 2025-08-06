@@ -220,7 +220,8 @@ a {
 }
 
 a:hover {
-  color: var(--bd-theme-1);
+  /* color: var(--bd-theme-1); */
+  color:#03AE46;
 }
 
 *::-moz-selection {

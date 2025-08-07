@@ -363,10 +363,10 @@
                     rule: 'required',
                     errorMessage: 'The address field is required.',
             }])
-            .addField('#city', [{
-                    rule: 'required',
-                    errorMessage: 'The city field is required.',
-            }])
+            // .addField('#city', [{
+            //         rule: 'required',
+            //         errorMessage: 'The city field is required.',
+            // }])
             .onSuccess((event) => {
                 const submitButton = document.querySelector('#submit-btn');
                 submitButton.disabled = true;

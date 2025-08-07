@@ -31,6 +31,12 @@
                                             name="thumbnail_image" onchange="thumbnailPreview();">
                                         <code>Allowed file types: png, jpg, jpeg</code>
                                     </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-6">
+                                        <img id="image-preview"
+                                            src="{{ asset($module_data->thumbnail_image ?? 'assets/backend/images/picture.png') }}"
+                                            alt="Image Preview" class="img-fluid avatar-lg rounded mt-2">
+                                    </div>
                                     <div class="col-md-6">
                                         <label class="col-form-label" for="video">Video</label><code
                                             class="text-danger fs-4">*</code>
@@ -168,6 +174,26 @@
             const videoPreviewElement = document.getElementById('video-preview');
             videoPreviewElement.style.display = 'block';
             videoPreviewElement.src = URL.createObjectURL(fileInput.files[0]);
+        }
+        function thumbnailPreview() {
+            const fileInput = document.getElementById('thumbnail_image');
+            const filePath = fileInput.value;
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+            if (!allowedExtensions.exec(filePath)) {
+                toastr.error("The image must be a file of type: jpeg, jpg, png, gif.");
+                fileInput.value = '';
+                return false;
+            }
+            if (fileInput.files[0].size > 5048 * 1024) {
+                toastr.error("File size must be less than 2MB.");
+                fileInput.value = '';
+                return false;
+            }
+            let reader = new FileReader();
+            reader.onload = (e) => {
+                $('#image-preview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
         }
     </script>
 @endpush

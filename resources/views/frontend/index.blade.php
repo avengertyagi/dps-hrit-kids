@@ -265,7 +265,7 @@
                 </div>
             </div>
         </section>
-         <section class="bd-program-area pt-120 pb-120">
+        <section class="bd-program-area pt-120 pb-120">
             <div class="container">
                 <!-- program bg -->
                 <div class="bd-gradient-bg"></div>
@@ -303,22 +303,6 @@
                                             </div>
                                         </div>
                                         {!! $our_features_programs_child->content ?? '' !!}
-{{--                                        <div class="bd-program-content mb-30">--}}
-{{--                                            <h3 class="bd-program-title"><a class="hover-clr-1" href="program-details.html">Settling</a>--}}
-{{--                                            </h3>--}}
-{{--                                            <p>To round out our weekend of celebra tions, we are holding our reunion.</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="bd-program-info-wrapper theme-bg">--}}
-{{--                                            <div class="bd-program-info">--}}
-{{--                                                <h5 class="bd-program-info-title">4-5 Yrs <br><span>age</span></h5>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="bd-program-info">--}}
-{{--                                                <h5 class="bd-program-info-title">5 Days <br><span>weekly</span></h5>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="bd-program-info">--}}
-{{--                                                <h5 class="bd-program-info-title">3.30 Hrs<br><span>period</span></h5>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
                                     </div>
                                 </div>
                                 @endforeach
@@ -333,3 +317,5 @@
         </section>
     </main>
 @endsection
+
+

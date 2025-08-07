@@ -98,7 +98,7 @@
                                 <a href="javascript:void(0)" class="bd-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
                                     <span class="bd-btn-inner">
                                         <span class="bd-btn-normal">Admissions</span>
-                                        <span class="bd-btn-normal">Admissions</span>
+                                        <span class="bd-btn-hover">Admissions</span>
                                     </span>
                                 </a>
                             </div>

@@ -38,7 +38,7 @@
     <div class="bd-gallery-area p-relative pt-120 pb-95 p-relative">
         <div class="container">
             <div class="row">
-                @if (!empty($module_data['photos']))
+                  @if (isset($module_data['photos']) && count($module_data['photos']) > 0)
                     <div class="row">
                         @foreach ($module_data['photos'] as $photo)
                             <div class="col-md-3">
@@ -62,6 +62,8 @@
                             </div>
                         @endforeach
                     </div>
+                 @else
+                    <p class="text-center">No photos found.</p>
                 @endif
             </div>
         </div>

@@ -38,7 +38,7 @@
     <div class="bd-gallery-area p-relative pt-120 pb-95">
         <div class="container">
             <div class="row">
-                @if (!empty($module_data['videos']))
+                @if (isset($module_data['videos']) && count($module_data['videos']) > 0)
                     @foreach ($module_data['videos'] as $video)
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                             <div class="video-card-modern">
@@ -54,6 +54,8 @@
                             </div>
                         </div>
                     @endforeach
+                     @else
+                    <p class="text-center">No photos found.</p>
                 @endif
             </div>
         </div>

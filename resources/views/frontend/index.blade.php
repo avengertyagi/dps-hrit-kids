@@ -143,23 +143,11 @@
          <div class="container">
             <div class="row align-items-center">
                <div class="col-lg-6">
-                  <div class="bd-feedback-thumb-wrapper mb-60 p-relative wow fadeInLeft" data-wow-duration="1s"
-                     data-wow-delay=".3s">
-                     <div class="bd-feedback-thumb p-relative">
-                        <div class="bd-feedback-path-shape d-none d-md-block">
-                           <img src="{{ asset('assets/frontend/img/shape/radient-path.svg')}}" alt="img not found!">
-                        </div>
-                        <div class="bd-feedback-thumb-mask p-relative">
-                           <img src="assets/frontend/img/feedback/1.png" alt="img not found!">
-                           <div class="panel wow"></div>
-                        </div>
-                     </div>
-                     <div class="bd-feedback-thumb-shape">
-                        <div class="bd-feedback-thumb-shape p-absolute">
-                           <img src="{{ asset('assets/frontend/img/shape/home-3-shape-1.png')}}" alt="img not found!">
-                        </div>
-                     </div>
-                  </div>
+                <div class="bd-blog-details wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                              <div class="bd-blog-details-thumb">
+                <img src="{{ asset('assets/frontend/img/unique_offering.png')}}" alt="img not found!">
+                </div>
+                </div>
                </div>
                <div class="col-lg-6">
                   <div class="bd-section-title-wrapper mb-40 wow fadeInRight" data-wow-duration="1s"

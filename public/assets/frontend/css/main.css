@@ -7273,7 +7273,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .bd-blog-details-thumb {
-  height: 367px;
+  /* height: 367px; */
   width: 100%;
 }
 

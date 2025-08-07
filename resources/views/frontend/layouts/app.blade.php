@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>DPS HRIT Kids | @yield('title')</title>
     <!-- META Description: Add a short summary -->
-    <meta name="description" content="DPS HRIT Kids is a leading preschool in Ghaziabad focused on holistic child development and joyful learning.">
+    <meta name="description" content="DPS HRIT Kids is the pre-primary wing of Delhi Public School HRIT Campus located in Ghaziabad, India">
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

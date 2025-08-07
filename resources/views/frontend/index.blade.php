@@ -138,102 +138,39 @@
                 </div>
             </div>
         </section>
-        <section class="unique-offer-section">
-            <div class="container">
-                <div class="row align-items-lg-center">
-                    <div class="col-lg-6">
-                        <div class="block-header">
-                            <h2 class="bd-section-title mb-10">
-                                {{ $module_data['unique_offering_section']->section_title ?? '' }}</h2>
+         <!-- feedback area start here-->
+      <section class="bd-feedback-area pb-60 pt-120">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-6">
+                  <div class="bd-feedback-thumb-wrapper mb-60 p-relative wow fadeInLeft" data-wow-duration="1s"
+                     data-wow-delay=".3s">
+                     <div class="bd-feedback-thumb p-relative">
+                        <div class="bd-feedback-path-shape d-none d-md-block">
+                           <img src="{{ asset('assets/frontend/img/shape/radient-path.svg')}}" alt="img not found!">
                         </div>
-                        <p>{{ $module_data['unique_offering_section']->content ?? '' }}</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="our_usps">
-                            <div class="circle_outer">
-                                <div class="circle-container">
-                                    <div class="learning-item" data-learn-tab="#0"
-                                        style="transform: rotate(0deg) translate(0px, -205px) rotate(0deg);"><img
-                                            class="img-fluid" src="https://www.bachpanglobal.com/img/Smart Classes (1).webp"
-                                            alt="Bachpan Smart Classes for Kids"title="Bachpan Smart Classes for Kids">
-                                    </div>
-                                    <div class="learning-item" data-learn-tab="#1"
-                                        style="transform: rotate(45deg) translate(0px, -205px) rotate(-45deg);"><img
-                                            class="img-fluid" src="https://www.bachpanglobal.com/img/Virtual Reality.webp"
-                                            alt="Virtual Reality (VR) Classes for Kids"title="Virtual Reality (VR) Classes for Kids">
-                                    </div>
-                                    <div class="learning-item" data-learn-tab="#2"
-                                        style="transform: rotate(90deg) translate(0px, -205px) rotate(-90deg);"><img
-                                            class="img-fluid"
-                                            src="https://www.bachpanglobal.com/img/SPROUT Curriculum (2).webp"
-                                            alt="SPROUT Curriculum at Bachpan"title="SPROUT Curriculum at Bachpan">
-                                    </div>
-                                    <div class="learning-item" data-learn-tab="#3"
-                                        style="transform: rotate(135deg) translate(0px, -205px) rotate(-135deg);"><img
-                                            class="img-fluid"
-                                            src="https://www.bachpanglobal.com/img/360° Support App (1).webp"
-                                            alt="Bachpan 360 App"title="Bachpan 360 App"></div>
-                                    <div class="learning-item" data-learn-tab="#4"
-                                        style="transform: rotate(180deg) translate(0px, -205px) rotate(-180deg);"><img
-                                            class="img-fluid"
-                                            src="https://www.bachpanglobal.com/img/Montessori Toys (1).webp"
-                                            alt="Montessori Toys" title="Montessori Toys"></di>
-                                </div>
-                                <div class="tab-element-content">
-                                    <div class="for-tab start">
-                                        <h3>Our USPs</h3>
-                                    </div>
-                                    <div class="for-tab" id="0">
-                                        <h3>Smart Classes</h3>
-                                        <p class="mb-0">Our Smart Classes consist of powerful visuals and
-                                            curriculum-mapped content for increasing your child’s learning retention.
-                                        </p>
-                                    </div>
-                                    <div class="for-tab" id="1">
-                                        <h3>Virtual Reality (VR)</h3>
-                                        <p class="mb-0">We are the first-ever preschool brand in India to use VR for
-                                            your child’s experiential and futuristic learning.</p>
-                                    </div>
-                                    <div class="for-tab" id="2">
-                                        <h3>SPROUT Curriculum</h3>
-                                        <p class="mb-0">We at Bachpan are the pioneers in age-specific and integrated
-                                            curriculum development for your child’s all-round growth.</p>
-                                    </div>
-                                    <div class="for-tab" id="3">
-                                        <h3>360° Support App</h3>
-                                        <p class="mb-0">No other preschool in India provides your child with an app
-                                            like the 360°, making 500+ hours of digital content accessible and much
-                                            more. </p>
-                                    </div>
-                                    <div class="for-tab" id="4">
-                                        <h3>Montessori Toys</h3>
-                                        <p class="mb-0">Our top-notch Montessori Toys ensure that your child learns
-                                            while playing and also has fun while learning.</p>
-                                    </div>
-                                    <div class="for-tab" id="5">
-                                        <h3>Concept Rooms</h3>
-                                        <p class="mb-0">Our innovative Concept Rooms like the AV Room, Dining Room,
-                                            Doll Room, and Ball Room foster your child’s multiple intelligences.</p>
-                                    </div>
-                                    <div class="for-tab" id="6">
-                                        <h3>Robotime</h3>
-                                        <p class="mb-0">Our Robotime Kit lays a solid foundation of STEAM learning
-                                            and builds your child’s core life skills like problem-solving.</p>
-                                    </div>
-                                    <div class="for-tab" id="7">
-                                        <h3>Speak-O-Kit</h3>
-                                        <p class="mb-0">Our Speak-O-Kit is a nanotechnology-based passive learning
-                                            tool that enables your child to learn from anywhere at any time.</p>
-                                    </div>
-                                </div>
-                                <div class="my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground"
-                                    data-paroller-direction="vertical"></div>
-                            </div>
+                        <div class="bd-feedback-thumb-mask p-relative">
+                           <img src="assets/frontend/img/feedback/1.png" alt="img not found!">
+                           <div class="panel wow"></div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                     <div class="bd-feedback-thumb-shape">
+                        <div class="bd-feedback-thumb-shape p-absolute">
+                           <img src="{{ asset('assets/frontend/img/shape/home-3-shape-1.png')}}" alt="img not found!">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="bd-section-title-wrapper mb-40 wow fadeInRight" data-wow-duration="1s"
+                     data-wow-delay=".3s">
+                     <h2 class="bd-section-title mb-5">{{ $module_data['unique_offering_section']->section_title ?? '' }}</h2>
+                     <p>{{ $module_data['unique_offering_section']->content ?? '' }}</p>
+                  </div>
+               </div>
             </div>
-        </section>
+         </div>
+      </section>
         <section class="why-choose-bachpan-sec pt-60 pb-60">
             <div class="container">
                 <div class="row">
@@ -317,5 +254,6 @@
         </section>
     </main>
 @endsection
+
 
 

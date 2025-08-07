@@ -72,7 +72,7 @@
                                         <ul>
                                             <li>
                                                 <i class="fa-light fa-location-dot"></i>
-                                                <a href="javascript:void(0)">{{ contactAddress() }}</a>
+                                                <a target="_blank" href="https://maps.app.goo.gl/9KqpR9Jg1ZbXrcbh9">{{ contactAddress() }}</a>
                                             </li>
                                             <li>
                                                 <i class="fa-light fa-phone"></i>

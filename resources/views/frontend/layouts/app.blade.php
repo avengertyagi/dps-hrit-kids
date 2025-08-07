@@ -523,7 +523,8 @@
             });
         });
     </script>
-    <script type="application/ld+json">
+@verbatim
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -539,6 +540,8 @@
   }
 }
 </script>
+@endverbatim
+
 
 </body>
 </html>

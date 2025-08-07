@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="mb-2 row">
                                             <div class="col-md-12 text-end">
-                                                <a href="{{ route('dashboard') }}"
+                                                <a href="{{ route('admission.index') }}"
                                                     class="btn btn-outline-warning waves-effect waves-light">Cancel</a>
                                                 <button id="submit-btn" type="submit" class="btn btn-primary">Submit
                                                 </button>

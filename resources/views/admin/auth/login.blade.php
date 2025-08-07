@@ -30,11 +30,11 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="auth-brand p-4">
                                         <a href="index.html" class="logo-light">
-                                            <img src="{{ asset('assets/frontend/img/logo_2.png') }}" alt="logo"
+                                            <img src="{{ asset('assets/frontend/img/logo.png') }}" alt="logo"
                                                 height="100">
                                         </a>
                                         <a href="index.html" class="logo-dark">
-                                            <img src="{{ asset('assets/frontend/img/logo_2.png') }}"
+                                            <img src="{{ asset('assets/frontend/img/logo.png') }}"
                                                 alt="dark logo" height="100">
                                         </a>
                                     </div>

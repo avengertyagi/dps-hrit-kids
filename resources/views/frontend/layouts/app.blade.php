@@ -528,7 +528,7 @@
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "DPS HRIT Kids",
-  "url": "https://www.dpshritkids.com",
+  "url": "https://www.dpshritkids.in",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "HRIT Campus",

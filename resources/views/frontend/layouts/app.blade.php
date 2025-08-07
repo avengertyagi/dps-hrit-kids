@@ -4,8 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DPS | @yield('title')</title>
-    <meta name="description" content="">
+    <title>DPS HRIT Kids | @yield('title')</title>
+    <!-- META Description: Add a short summary -->
+    <meta name="description" content="DPS HRIT Kids is a leading preschool in Ghaziabad focused on holistic child development and joyful learning.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- KEYWORDS (optional, low SEO impact) -->
+    <meta name="keywords" content="DPS HRIT Kids, Ghaziabad preschool, best play school, kindergarten in Ghaziabad, DPS Kids HRIT">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.dpshritkids.in/" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/frontend/img/favicon.png')}}">
+
+    <!-- Open Graph (for Facebook and other social media previews) -->
+    <meta property="og:title" content="DPS HRIT Kids - Best Preschool in Ghaziabad" />
+    <meta property="og:description" content="Join DPS HRIT Kids for a joyful and nurturing early learning experience. Admissions open!" />
+    <meta property="og:url" content="https://www.dpshritkids.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ asset('assets/frontend/img/social-preview.jpg') }}" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/frontend/img/favicon.png')}}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.css') }}">
@@ -502,5 +523,22 @@
             });
         });
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "DPS HRIT Kids",
+  "url": "https://www.dpshritkids.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "HRIT Campus",
+    "addressLocality": "Ghaziabad",
+    "addressRegion": "UP",
+    "postalCode": "201001",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
 </body>
 </html>

@@ -44,7 +44,7 @@
                             <div class="video-card-modern">
                                 <a href="{{ asset($video->video ?? '') }}" class="popup-video">
                                     <div class="video-thumb">
-                                        <img src="{{ asset($video->thumbnail ?? 'assets/frontend/img/gallery/d2.png') }}" alt="Video" class="img-fluid">
+                                        <img src="{{ asset($video->thumbnail_image ?? 'assets/frontend/img/gallery/d2.png') }}" alt="Video" class="img-fluid">
                                         <div class="play-btn">
                                             <i class="flaticon-play-button"></i>
                                         </div>

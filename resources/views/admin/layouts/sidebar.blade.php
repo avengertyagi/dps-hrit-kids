@@ -2,10 +2,10 @@
      <!-- Brand Logo Light -->
      <a href="{{ route('admission.index') }}" class="logo logo-light">
          <span class="logo-lg">
-             <img src="{{ asset('assets/frontend/img/logo.png') }}" height="100px" width="100px" alt="logo">
+             <img src="{{ asset('assets/frontend/img/logo.png') }}" height="300px" width="100px" alt="logo">
          </span>
          <span class="logo-sm">
-             <img src="{{ asset('assets/frontend/img/logo.png') }}" height="100px"width="100px"alt="small logo">
+             <img src="{{ asset('assets/frontend/img/logo.png') }}" height="300px"width="100px"alt="small logo">
          </span>
      </a>
      <!-- Brand Logo Dark -->

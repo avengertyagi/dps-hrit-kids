@@ -58,7 +58,7 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="bd-header-logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{ asset('assets/frontend/img/') }}" alt="logo">
+                                <img src="{{ asset('assets/frontend/img/logo.png') }}" alt="logo">
                             </a>
                         </div>
                         <div class="bd-main-menu d-none d-lg-flex align-items-center">

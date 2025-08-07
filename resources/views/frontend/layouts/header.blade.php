@@ -21,7 +21,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div class="bd-header-meta-text">
-                                            <p><a href="javascript:void(0)">{{ contactAddress() }}</a></p>
+                                            <p><a href="https://maps.app.goo.gl/9KqpR9Jg1ZbXrcbh9">{{ contactAddress() }}</a></p>
                                         </div>
                                     </div>
                                 </div>

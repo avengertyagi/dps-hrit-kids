@@ -7,7 +7,7 @@
     <title>DPS | @yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/frontend/img/favicon.jpg')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/frontend/img/favicon.png')}}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/meanmenu.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.min.css') }}">
@@ -32,7 +32,7 @@
             <div class="preloader-thumb-wrap">
                 <div class="preloader-thumb">
                     <div class="preloader-border"></div>
-                    <img src="{{ asset('assets/frontend/img/logo_2.png') }}" alt="img not found!">
+                    <img src="{{ asset('assets/frontend/img/logo.png') }}" alt="img not found!">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
                     <div class="offcanvas__logo logo">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('assets/frontend/img/logo_2.png') }}" alt="logo">
+                            <img src="{{ asset('assets/frontend/img/logo.png') }}" alt="logo">
                         </a>
                     </div>
                     <div class="offcanvas__close">
@@ -208,7 +208,13 @@
                                                     placeholder="Mobile Number">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
+                                            <div class="bd-contact-input">
+                                                <label for="textarea">Address<sup><i class="fa-solid fa-star-of-life"></i></sup></label>
+                                                <textarea id="address" name="address" placeholder="Address"></textarea>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="col-md-6">
                                             <div class="bd-contact-input mb-15">
                                                 <label for="textarea">State<sup><i
                                                             class="fa-solid fa-star-of-life"></i></sup></label>
@@ -223,7 +229,7 @@
                                                 <select name="city" id="city" class="form-control">
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-md-12">
                                             <div class="bd-contact-agree-btn text-center">
                                                 <button type="submit" id="submit-btn" class="bd-btn">
@@ -353,9 +359,9 @@
                     errorMessage: 'The mobile must be at most 10 digits long.',
                 }
             ])
-            .addField('#state', [{
+            .addField('#address', [{
                     rule: 'required',
-                    errorMessage: 'The state field is required.',
+                    errorMessage: 'The address field is required.',
             }])
             .addField('#city', [{
                     rule: 'required',
@@ -497,6 +503,4 @@
         });
     </script>
 </body>
-<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Mar 2025 15:55:42 GMT -->
-
 </html>

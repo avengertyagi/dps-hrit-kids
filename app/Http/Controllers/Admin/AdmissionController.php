@@ -33,16 +33,16 @@ class AdmissionController extends Controller
         $city = $request->city;
         $admission_for = $request->admission_for;
         $dateRange = $request->date;
-        $addmission = Admission::with('city', 'state', 'country')
-            ->when($country !== null, function ($addmission) use ($country) {
-                return $addmission->where('country_id', '=', $country);
-            })
-            ->when($state !== null, function ($addmission) use ($state) {
-                return $addmission->where('state_id', '=', $state);
-            })
-            ->when($city !== null, function ($addmission) use ($city) {
-                return $addmission->where('city_id', '=', $city);
-            })
+        $addmission = Admission::query()
+            // ->when($country !== null, function ($addmission) use ($country) {
+            //     return $addmission->where('country_id', '=', $country);
+            // })
+            // ->when($state !== null, function ($addmission) use ($state) {
+            //     return $addmission->where('state_id', '=', $state);
+            // })
+            // ->when($city !== null, function ($addmission) use ($city) {
+            //     return $addmission->where('city_id', '=', $city);
+            // })
             ->when($admission_for !== null, function ($addmission) use ($admission_for) {
                 return $addmission->where('admission_for', '=', $admission_for);
             })
@@ -60,15 +60,15 @@ class AdmissionController extends Controller
             ->editColumn('date', function ($data) {
                 return $data->created_at->format('d/m/Y');
             })
-            ->addColumn('country', function ($data) {
-                return ucfirst($data->country->name ?? 'NA');
-            })
-            ->addColumn('state', function ($data) {
-                return ucfirst($data->state->name ?? 'NA');
-            })
-            ->addColumn('city', function ($data) {
-                return ucfirst($data->city->name ?? 'NA');
-            })
+            // ->addColumn('country', function ($data) {
+            //     return ucfirst($data->country->name ?? 'NA');
+            // })
+            // ->addColumn('state', function ($data) {
+            //     return ucfirst($data->state->name ?? 'NA');
+            // })
+            // ->addColumn('city', function ($data) {
+            //     return ucfirst($data->city->name ?? 'NA');
+            // })
             ->editColumn('admission_for', function ($data) {
                 if ($data->admission_for == 'playgroup') {
                     return '<span class="badge bg-primary">Playgroup</span>';
@@ -80,7 +80,7 @@ class AdmissionController extends Controller
                     return '<span class="badge bg-purple">UKG</span>';
                 }
             })
-            ->rawColumns(['date', 'country', 'state', 'city', 'admission_for'])
+            ->rawColumns(['date', 'admission_for'])
             ->make(true);
     }
 }

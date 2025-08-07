@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
-    <link rel="shortcut icon" href="{{ asset('assets/backend/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/img/favicon.png') }}">
     <script src="{{ asset('assets/backend/js/config.js') }}"></script>
     <link href="{{ asset('assets/backend/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />
     <link href="{{ asset('assets/backend/css/icons.min.css') }}" rel="stylesheet" type="text/css" />

@@ -31,7 +31,7 @@
                                                         <input type="text" id="date" name="date"
                                                             class="form-control" placeholder="From Date - To Date">
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    {{-- <div class="col-md-4">
                                                         <label for="select-status">State</label>
                                                         <select class="form-control" id="state" name="state">
                                                             <option value="" disabled selected>Please Select
@@ -44,7 +44,7 @@
                                                             <option value="" disabled selected>Please Select
                                                             </option>
                                                         </select>
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="col-md-4">
                                                         <label for="select-status">Addmission For</label>
                                                         <select class="form-control" id="admission_for"
@@ -74,12 +74,13 @@
                                         <tr>
                                             <th>Date</th>
                                             <th>Date</th>
-                                            <th>State</th>
-                                            <th>City</th>
+                                            {{-- <th>State</th>
+                                            <th>City</th> --}}
                                             <th>Student Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Admission For</th>
+                                            <th>Adress</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -136,20 +137,20 @@
                         orderable: false,
                         defaultContent: 'NA'
                     },
-                    {
-                        data: 'state',
-                        name: 'state',
-                        searchable: true,
-                        orderable: true,
-                        defaultContent: 'NA'
-                    },
-                    {
-                        data: 'city',
-                        name: 'city',
-                        searchable: true,
-                        orderable: true,
-                        defaultContent: 'NA'
-                    },
+                    // {
+                    //     data: 'state',
+                    //     name: 'state',
+                    //     searchable: true,
+                    //     orderable: true,
+                    //     defaultContent: 'NA'
+                    // },
+                    // {
+                    //     data: 'city',
+                    //     name: 'city',
+                    //     searchable: true,
+                    //     orderable: true,
+                    //     defaultContent: 'NA'
+                    // },
                     {
                         data: 'student_name',
                         name: 'student_name',
@@ -174,6 +175,13 @@
                     {
                         data: 'admission_for',
                         name: 'admission_for',
+                        searchable: true,
+                        orderable: true,
+                        defaultContent: 'NA'
+                    },
+                    {
+                        data: 'address',
+                        name: 'address',
                         searchable: true,
                         orderable: true,
                         defaultContent: 'NA'

@@ -20,6 +20,11 @@ function youtubelink()
 {
     return Setting::where('key', 'youtube')->first()->value ?? '';
 }
+
+function instagramlink()
+{
+    return Setting::where('key', 'instagram')->first()->value ?? '';
+}
 /**
  * Return the value of the 'phone' setting.
  *

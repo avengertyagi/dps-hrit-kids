@@ -9,7 +9,7 @@
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="Techzaa" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/frontend/img/favicon.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/frontend/img/favicon.png') }}">
 
     <!-- Datatables css -->
     <link href="{{ asset('assets/backend/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}"

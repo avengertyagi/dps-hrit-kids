@@ -95,7 +95,7 @@
                                                 <a href="{{ facebooklink() }}"><i class="fa-brands fa-facebook-f"></i>facebook</a>
                                             </div>
                                             <div class="bd-footer-social">
-                                                <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                                                <a href="{{ instagramlink() }}"><i class="fa-brands fa-instagram"></i>Instagram</a>
                                             </div>
                                             <div class="bd-footer-social">
                                                 <a href="{{ youtubelink() }}"><i class="fa-brands fa-youtube"></i>youtube</a>

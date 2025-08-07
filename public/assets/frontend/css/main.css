@@ -220,8 +220,7 @@ a {
 }
 
 a:hover {
-  /* color: var(--bd-theme-1); */
-  color:#03AE46 !important;
+  color: var(--bd-theme-1);
 }
 
 *::-moz-selection {
@@ -3166,7 +3165,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   top: 100%;
   inset-inline-start: -30%;
   width: 200px;
-  background:#03AE46;
+  background: #03AE46;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -5190,7 +5189,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .bd-promotion-btn-2 a:hover {
-  color: var(--bd-theme-1);
+  color: #03AE46 !important;
 }
 
 .bd-promotion-btn-2 a i {
@@ -11299,12 +11298,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
   z-index: 0;
   color: #fff;
 }
-.application-form-modal .modal-body .modal-rightbox .nice-select{
+
+.application-form-modal .modal-body .modal-rightbox .nice-select {
   color: var(--bd-common-black);
 }
-.application-form-modal .modal-body .modal-rightbox ul.list{
+
+.application-form-modal .modal-body .modal-rightbox ul.list {
   color: var(--bd-theme-1);
 }
+
 .application-form-modal .modal-body .modal-rightbox::after {
   content: '';
   position: absolute;
@@ -11312,7 +11314,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   z-index: -1;
 }
@@ -11358,43 +11360,44 @@ only screen and (min-width: 576px) and (max-width: 767px),
   margin-bottom: 10px;
 }
 
-.application-form-modal .modal-body .modal-rightbox .bd-contact-agree-btn{
+.application-form-modal .modal-body .modal-rightbox .bd-contact-agree-btn {
   margin-top: 25px;
 }
 
-.select2-container{
+.select2-container {
   width: 100% !important;
 }
 
-.select2-container--open{
+.select2-container--open {
   z-index: 9999;
 }
 
-.select2-container .select2-selection--single{
+.select2-container .select2-selection--single {
   height: 42px !important;
   border-radius: 6px !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered{
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 38px !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 9px !important;
 }
 
-.select2-results__option{
+.select2-results__option {
   color: var(--bd-theme-1);
 }
 
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: var(--bd-theme-1) !important;
 }
 
-.bd-footer-top{
+.bd-footer-top {
   display: none;
 }
-.bd-footer-wrapper.pt-60{
+
+.bd-footer-wrapper.pt-60 {
   padding-top: 0;
 }
 
@@ -11468,8 +11471,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
   width: 0;
   height: 0;
   border-left: 32px solid #fff;
-	border-top: 22px solid transparent;
-	border-bottom: 22px solid transparent;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
 }
 
 @keyframes pulse-border {
@@ -11477,6 +11480,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
@@ -11485,14 +11489,14 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 
 
-@media(min-width: 1200px){
-  .header-hamburger{
+@media(min-width: 1200px) {
+  .header-hamburger {
     display: none;
   }
 }
 
-@media (max-width: 1199px){
-  .bd-header-bottom-right{
+@media (max-width: 1199px) {
+  .bd-header-bottom-right {
     display: none !important;
   }
 }
@@ -11524,7 +11528,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
   .why-choose-bachpan-sec .advantage-list li {
     width: 50%;
   }
-  .bd-header-bottom-right{
+
+  .bd-header-bottom-right {
     display: flex !important;
   }
 }
@@ -11550,6 +11555,18 @@ only screen and (min-width: 576px) and (max-width: 767px),
   .media-section .date-box div {
     line-height: normal;
   }
+}
+
+
+a:hover {
+  color: #ffffff !important;
+  background-color: #03AE46 !important;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #03AE46 !important;
+  border-color: #03AE46 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

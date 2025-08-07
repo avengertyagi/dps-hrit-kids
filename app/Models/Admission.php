@@ -12,13 +12,14 @@ class Admission extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'country_id',
-        'state_id',
-        'city_id',
+        // 'country_id',
+        // 'state_id',
+        // 'city_id',
         'student_name',
         'email',
         'phone',
-        'admission_for'
+        'admission_for',
+        'address'
     ];
     /**
      * Get the city associated with the address.

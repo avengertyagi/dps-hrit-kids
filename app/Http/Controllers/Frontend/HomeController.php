@@ -119,13 +119,14 @@ class HomeController extends Controller
                 return back()->with('errors', $validator->errors());
             }
             Admission::create([
-                'country_id' => 101,
-                'state_id' => $request->state,
-                'city_id' => $request->city,
+                // 'country_id' => 101,
+                // 'state_id' => $request->state,
+                // 'city_id' => $request->city,
                 'student_name' => $request->student_name,
                 'email' => $request->email,
                 'phone' => $request->phone,
-                'admission_for' => $request->admission_for
+                'admission_for' => $request->admission_for,
+                'address' => $request->address
             ]);
             return back()->with('success','Addmission Submited Successfully.');
         } catch (\Exception $e) {

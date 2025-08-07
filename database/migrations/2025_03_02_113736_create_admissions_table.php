@@ -13,16 +13,17 @@ return new class extends Migration
     {
         Schema::create('admissions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
-            $table->unsignedBigInteger('state_id');
-            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
-            $table->unsignedBigInteger('city_id');
+            // $table->unsignedBigInteger('country_id');
+            // $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+            // $table->unsignedBigInteger('state_id');
+            // $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
+            // $table->unsignedBigInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
             $table->string('student_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->enum('admission_for',['playgroup','nursery','lkg','ukg'])->nullable();
+            $table->text('address')->nullable();
             $table->timestamps();
         });
     }

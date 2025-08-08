@@ -75,6 +75,10 @@
     </script>
 @endpush
    <style>
+    .mfp-bg, .mfp-wrap {
+    z-index: 9999 !important;
+}
+
        .video-card-modern .video-thumb {
            position: relative;
            overflow: hidden;

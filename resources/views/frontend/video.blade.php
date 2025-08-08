@@ -78,6 +78,42 @@
     .mfp-bg, .mfp-wrap {
     z-index: 9999 !important;
 }
+/* Fix popup not vertically centered on mobile */
+.mfp-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mfp-iframe-holder .mfp-content {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.mfp-iframe-scaler {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mfp-iframe-holder {
+    top: 0 !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.mfp-bg {
+    background: rgba(0, 0, 0, 0.85);
+}
+@media (max-width: 576px) {
+    .mfp-iframe-scaler {
+        height: 60vh;
+    }
+}
 
        .video-card-modern .video-thumb {
            position: relative;

@@ -37,115 +37,46 @@
     </section>
     <div class="bd-gallery-area p-relative pt-120 pb-95">
         <div class="container">
-            <div class="row">
-                @if (isset($module_data['videos']) && count($module_data['videos']) > 0)
-                    @foreach ($module_data['videos'] as $video)
-                        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                            <div class="video-card-modern">
-                                <a href="{{ asset($video->video ?? '') }}" class="popup-video">
-                                    <div class="video-thumb">
-                                        <img src="{{ asset($video->thumbnail_image ?? 'assets/frontend/img/gallery/d2.png') }}" alt="Video" class="img-fluid">
-                                        <div class="play-btn">
-                                            <i class="flaticon-play-button"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                                <h6 class="video-title text-center mt-2">{{ $video->title ?? '' }}</h6>
-                            </div>
-                        </div>
-                    @endforeach
-                     @else
-                    <p class="text-center">No photos found.</p>
-                @endif
+           <div class="row">
+    @if (isset($module_data['videos']) && count($module_data['videos']) > 0)
+        @foreach ($module_data['videos'] as $index => $video)
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="video-card-modern">
+                    <video
+                        id="video_{{ $index }}"
+                        class="video-js vjs-default-skin vjs-fluid"
+                        controls
+                        preload="auto"
+                        poster="{{ asset($video->thumbnail_image ?? 'assets/frontend/img/gallery/d2.png') }}"
+                        data-setup='{}'>
+                        <source src="{{ asset($video->video ?? '') }}" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <h6 class="video-title text-center mt-2">{{ $video->title ?? '' }}</h6>
+                </div>
             </div>
+        @endforeach
+    @else
+        <p class="text-center">No videos found.</p>
+    @endif
+</div>
+
         </div>
     </div>
 @endsection
 @push('js')
-    <!-- Include jQuery + Magnific Popup JS/CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.popup-video').magnificPopup({
-                type: 'iframe'
-            });
-        });
-    </script>
-@endpush
-   <style>
-    .mfp-bg, .mfp-wrap {
-    z-index: 9999 !important;
-}
-/* Fix popup not vertically centered on mobile */
-.mfp-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.mfp-iframe-holder .mfp-content {
-    max-width: 100%;
+<!-- Video.js CDN -->
+<link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+<style>
+.video-card-modern {
+    position: relative;
     width: 100%;
-    height: 100%;
 }
-
-.mfp-iframe-scaler {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.video-card-modern video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
-
-.mfp-iframe-holder {
-    top: 0 !important;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.mfp-bg {
-    background: rgba(0, 0, 0, 0.85);
-}
-@media (max-width: 576px) {
-    .mfp-iframe-scaler {
-        height: 60vh;
-    }
-}
-
-       .video-card-modern .video-thumb {
-           position: relative;
-           overflow: hidden;
-           border-radius: 20px;
-           transition: transform 0.3s;
-       }
-
-       .video-card-modern .video-thumb img {
-           width: 100%;
-           transition: transform 0.4s ease;
-       }
-
-       .video-card-modern .video-thumb:hover img {
-           transform: scale(1.05);
-       }
-
-       .video-card-modern .play-btn {
-           position: absolute;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%, -50%);
-           background-color: rgba(3, 174, 70, 0.8);
-           color: #fff;
-           font-size: 32px;
-           padding: 15px;
-           border-radius: 50%;
-           transition: opacity 0.3s;
-           opacity: 0;
-       }
-
-       .video-card-modern .video-thumb:hover .play-btn {
-           opacity: 1;
-       }
-   </style>
+</style>
+@endpush

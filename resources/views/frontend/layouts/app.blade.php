@@ -252,7 +252,13 @@
                                             </div>
                                         </div> --}}
                                         <div class="col-md-12">
-                                            <div class="bd-contact-agree-btn text-center">
+                                            <div class="bd-contact-agree-btn text-end">
+                                                <button type=button class="bd-btn-warning" data-bs-dismiss="modal">
+                                                     <span class="bd-btn-inner">
+                                                        <span class="bd-btn-normal">Close</span>
+                                                        <span class="bd-btn-hover">Close</span>
+                                                    </span>
+                                                </button>
                                                 <button type="submit" id="submit-btn" class="bd-btn">
                                                     <span class="bd-btn-inner">
                                                         <span class="bd-btn-normal">Submit</span>
@@ -507,19 +513,6 @@
                 }
             }).on('select2:select', function(e) {
                 validation.revalidateField('#city');
-            });
-            $('#admission_for').select2({
-                placeholder: "Please Select",
-                allowClear: true,
-            }).on('select2:unselecting', function() {
-                $(this).data('unselecting', true);
-            }).on('select2:opening', function(e) {
-                if ($(this).data('unselecting')) {
-                    $(this).removeData('unselecting');
-                    e.preventDefault();
-                }
-            }).on('select2:select', function(e) {
-                validation.revalidateField('#admission_for');
             });
         });
     </script>

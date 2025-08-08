@@ -51,13 +51,13 @@
                                     <div class="bd-footer-list bd-footer-list-2">
                                         <div class="bd-footer-social-wrapper is-white">
                                             <div class="bd-footer-social">
-                                                <a href="{{ facebooklink() }}"><i class="fa-brands fa-facebook-f"></i>facebook</a>
+                                                <a target="_blank" href="{{ facebooklink() }}"><i class="fa-brands fa-facebook-f"></i>facebook</a>
                                             </div>
                                             <div class="bd-footer-social">
-                                                <a href="{{ instagramlink() }}"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                                                <a target="_blank" href="{{ instagramlink() }}"><i class="fa-brands fa-instagram"></i>Instagram</a>
                                             </div>
                                             <div class="bd-footer-social">
-                                                <a href="{{ youtubelink() }}"><i class="fa-brands fa-youtube"></i>youtube</a>
+                                                <a target="_blank" href="{{ youtubelink() }}"><i class="fa-brands fa-youtube"></i>youtube</a>
                                             </div>
                                         </div>
                                     </div>

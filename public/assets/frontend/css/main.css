@@ -706,6 +706,27 @@ i[class^=flaticon-] {
 /*  02. BUTTON CSS
 /*----------------------------------------*/
 /* theme btn */
+.bd-btn-warning {
+  font-size: 16px;
+  font-weight: var(--bd-fw-medium);
+  color: var(--bd-common-white);
+  background: var(--bd-theme-2);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 36px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-flex;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -moz-transition: all 0.5s ease-out 0s;
+  -ms-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+  text-transform: capitalize;
+}
 .bd-btn {
   font-size: 16px;
   font-weight: var(--bd-fw-medium);

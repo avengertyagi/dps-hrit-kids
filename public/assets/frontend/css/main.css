@@ -727,6 +727,7 @@ i[class^=flaticon-] {
   transition: all 0.5s ease-out 0s;
   text-transform: capitalize;
 }
+
 .bd-btn {
   font-size: 16px;
   font-weight: var(--bd-fw-medium);
@@ -1544,6 +1545,54 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 @media (max-width: 575px) {
   .bd-breadcrumb-title {
     font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .application-form-modal .modal-dialog {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox {
+    padding: 15px 10px;
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox .bd-contact-input label {
+    font-size: 14px;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox .bd-contact-input input,
+  .application-form-modal .modal-body .modal-rightbox .bd-contact-input textarea,
+  .application-form-modal .modal-body .modal-rightbox .bd-contact-input .nice-select {
+    font-size: 14px;
+    padding: 8px;
+    height: auto;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox .bd-contact-agree-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox .offcanvas__close-btn {
+    font-size: 22px;
+    right: 0;
+    top: -25px;
+  }
+
+  .application-form-modal .modal-body .modal-rightbox .bd-btn,
+  .application-form-modal .modal-body .modal-rightbox .bd-btn-warning {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -11412,4 +11461,5 @@ only screen and (min-width: 576px) and (max-width: 767px),
     line-height: normal;
   }
 }
+
 /*# sourceMappingURL=main.css.map */

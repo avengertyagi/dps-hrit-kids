@@ -45,7 +45,7 @@
 	////////////////////////////////////////////////////
 	//  01. PreLoader Js
 	windowOn.on("load", function () {
-	 $("#loading").delay(1000).fadeOut(300);
+		$("#loading").delay(1000).fadeOut(300);
 	});
 
 
@@ -158,7 +158,9 @@
 	$("a,.sub-menu").on("mouseleave", function () {
 		$(".mouseCursor").removeClass("d-none");
 	});
-
+	$('.admissions-btn').on('click', function () {
+		$('.offcanvas__area').removeClass('offcanvas-opened');
+	});
 
 
 	// Mouse Custom Cursor
@@ -203,7 +205,7 @@
 							($(this).is("a", "button") &&
 								$(this).closest(".cursor-pointer").length) ||
 								(e.classList.remove("cursor-hover"),
-								t.classList.remove("cursor-hover"));
+									t.classList.remove("cursor-hover"));
 						}
 					),
 					(e.style.visibility = "visible"),
@@ -339,7 +341,7 @@
 			var setColor = localStorage.getItem("kd_color_scheme");
 
 			if (setColor != null) {
-        
+
 			} else {
 				setColor = defaultColor;
 			}
@@ -445,7 +447,7 @@
 	) {
 		tp_color_settings();
 	}
-	
+
 	////////////////////////////////////////////////////
 	// 04. Sidebar Js
 	$(".offcanvas-open-btn").on("click", function () {
@@ -478,13 +480,13 @@
 		$(".bd-search-popup-area").removeClass("bd-search-opened");
 		$(".bd-search-overlay").removeClass("bd-search-opened");
 	});
-	
+
 	$(".bd-search-overlay").on("click", function () {
 		$(".bd-search-popup-area").removeClass("bd-search-opened");
 		$(".bd-search-overlay").removeClass("bd-search-opened");
 	});
-	
-	
+
+
 
 
 	////////////////////////////////////////////////////
@@ -507,14 +509,14 @@
 	$("[data-background").each(function () {
 		$(this).css("background-image", "url( " + $(this).attr("data-background") + "  )");
 	});
-	
+
 	$("[data-width]").each(function () {
 		$(this).css("width", $(this).attr("data-width"));
 	});
 
 	$("[data-bg-color]").each(function () {
-        $(this).css("background-color", $(this).attr("data-bg-color"));
-    });
+		$(this).css("background-color", $(this).attr("data-bg-color"));
+	});
 
 	////////////////////////////////////////////////////
 	// 08. Nice Select Js
@@ -523,27 +525,27 @@
 	////////////////////////////////////////////////////
 	// 09. On Load Section Animation
 
-function bdOnLoadAnim(triggerClass, addClass, offsetNumber){
-	let target_element = document.getElementsByClassName(triggerClass);
-	if (target_element.length) {
-		return new Waypoint({
-			element: target_element,
-			handler: function(direction) {
-				$(this[0,'element']).addClass(addClass);
-			},
-			// Class add position from the top of the scrolling window 
-			// for pixel value pass integer value, such as 20 in parameter and for % value pass string value, such as = "20%".
-			offset: offsetNumber,
-		  })
+	function bdOnLoadAnim(triggerClass, addClass, offsetNumber) {
+		let target_element = document.getElementsByClassName(triggerClass);
+		if (target_element.length) {
+			return new Waypoint({
+				element: target_element,
+				handler: function (direction) {
+					$(this[0, 'element']).addClass(addClass);
+				},
+				// Class add position from the top of the scrolling window 
+				// for pixel value pass integer value, such as 20 in parameter and for % value pass string value, such as = "20%".
+				offset: offsetNumber,
+			})
+		}
 	}
-}
 
-bdOnLoadAnim('bd-promotion-area','active-anim','30%');
-bdOnLoadAnim('bd-promotion-area-2','active-anim','30%');
-bdOnLoadAnim('bd-joining-area','active-anim','35%');
-bdOnLoadAnim('bd-faq-area','active-anim','35%');
+	bdOnLoadAnim('bd-promotion-area', 'active-anim', '30%');
+	bdOnLoadAnim('bd-promotion-area-2', 'active-anim', '30%');
+	bdOnLoadAnim('bd-joining-area', 'active-anim', '35%');
+	bdOnLoadAnim('bd-faq-area', 'active-anim', '35%');
 
-  
+
 	////////////////////////////////////////////////////
 	// 10. Smooth Scroll Js
 	function smoothSctollTop() {
@@ -580,27 +582,27 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 			prevArrow: '<button type="button" class="slick-prev"><i class="far fa-arrow-left"></i></button>',
 			nextArrow: '<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></button>',
 			responsive: [{
-			breakpoint: 767,
-			settings: {
-				dots: false,
-				arrows: false
-			}
+				breakpoint: 767,
+				settings: {
+					dots: false,
+					arrows: false
+				}
 			}]
 		});
-	
+
 		function doAnimations(elements) {
 			var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 			elements.each(function () {
-			var $this = $(this);
-			var $animationDelay = $this.data('delay');
-			var $animationType = 'animated ' + $this.data('animation');
-			$this.css({
-				'animation-delay': $animationDelay,
-				'-webkit-animation-delay': $animationDelay
-			});
-			$this.addClass($animationType).one(animationEndEvents, function () {
-				$this.removeClass($animationType);
-			});
+				var $this = $(this);
+				var $animationDelay = $this.data('delay');
+				var $animationType = 'animated ' + $this.data('animation');
+				$this.css({
+					'animation-delay': $animationDelay,
+					'-webkit-animation-delay': $animationDelay
+				});
+				$this.addClass($animationType).one(animationEndEvents, function () {
+					$this.removeClass($animationType);
+				});
 			});
 		}
 	}
@@ -690,7 +692,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-class-pagination',
 			clickable: true,
-		  },
+		},
 		breakpoints: {
 			'1200': {
 				slidesPerView: 3,
@@ -718,7 +720,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-class-pagination',
 			clickable: true,
-		  },
+		},
 		breakpoints: {
 			'1200': {
 				slidesPerView: 2,
@@ -747,7 +749,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-teacher-pagination',
 			clickable: true,
-		  },
+		},
 		breakpoints: {
 			'1200': {
 				slidesPerView: 4,
@@ -776,8 +778,8 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-program-pagination',
 			clickable: true,
-		  },
-		  navigation: {
+		},
+		navigation: {
 			nextEl: ".bd-program-next",
 			prevEl: ".bd-program-prev",
 		},
@@ -825,7 +827,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-testimonial-pagination',
 			clickable: true,
-		  },
+		},
 		breakpoints: {
 			'1200': {
 				slidesPerView: 1,
@@ -855,7 +857,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-testimonial-pagination-2',
 			clickable: true,
-		  },
+		},
 		breakpoints: {
 			'1200': {
 				slidesPerView: 2,
@@ -885,7 +887,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-blog-pagination',
 			clickable: true,
-		  },
+		},
 		// Navigation arrows
 		navigation: {
 			nextEl: ".bd-blog-next",
@@ -919,7 +921,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-gallery-pagination',
 			clickable: true,
-		  },
+		},
 
 		breakpoints: {
 			'1200': {
@@ -949,7 +951,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination',
 			clickable: true,
-		  },
+		},
 	});
 
 	var productSlider2 = new Swiper('.bd-product-thumb-active-2', {
@@ -963,7 +965,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-2',
 			clickable: true,
-		  },
+		},
 	});
 
 	var productSlider3 = new Swiper('.bd-product-thumb-active-3', {
@@ -977,7 +979,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-3',
 			clickable: true,
-		  },
+		},
 	});
 
 	var productSlider4 = new Swiper('.bd-product-thumb-active-4', {
@@ -991,7 +993,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-4',
 			clickable: true,
-		  },
+		},
 	});
 
 	var productSlider5 = new Swiper('.bd-product-thumb-active-5', {
@@ -1005,7 +1007,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-5',
 			clickable: true,
-		  },
+		},
 	});
 	var productSlider6 = new Swiper('.bd-product-thumb-active-6', {
 		slidesPerView: 1,
@@ -1018,7 +1020,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-6',
 			clickable: true,
-		  },
+		},
 	});
 	var productSlider7 = new Swiper('.bd-product-thumb-active-7', {
 		slidesPerView: 1,
@@ -1031,7 +1033,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-7',
 			clickable: true,
-		  },
+		},
 	});
 	var productSlider8 = new Swiper('.bd-product-thumb-active-8', {
 		slidesPerView: 1,
@@ -1044,7 +1046,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-8',
 			clickable: true,
-		  },
+		},
 	});
 	var productSlider9 = new Swiper('.bd-product-thumb-active-9', {
 		slidesPerView: 1,
@@ -1057,7 +1059,7 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 		pagination: {
 			el: '.bd-product-thumb-pagination-9',
 			clickable: true,
-		  },
+		},
 	});
 
 
@@ -1174,25 +1176,25 @@ bdOnLoadAnim('bd-faq-area','active-anim','35%');
 	$('.hover__active').on('mouseenter', function () {
 		$(this).addClass('active').parent().siblings().find('.hover__active').removeClass('active');
 	});
-	
+
 })(jQuery);
 
 function learnTab() {
-    $("[data-learn-tab]").length > 0 && ($("[data-learn-tab]").on("mouseover", function() {
-        var t = $(this),
-            a = t.attr("data-learn-tab"),
-            i = $(a),
-            e = i.closest(".tab-element-content"),
-            o = t.closest(".circle-container");
-        e.find(".for-tab").removeClass("active"), o.find("[data-learn-tab]").removeClass("active"), t.addClass("active"), i.addClass("active"), e.find(".for-tab.start").hide()
-    }), $("[data-learn-tab]").on("mouseleave", function() {
-        var t = $(this),
-            a = t.attr("data-learn-tab"),
-            i = $(a),
-            e = i.closest(".tab-element-content");
-        t.closest(".circle-container");
-        t.removeClass("active"), i.removeClass("active"), e.find(".for-tab.start").show()
-    }))
+	$("[data-learn-tab]").length > 0 && ($("[data-learn-tab]").on("mouseover", function () {
+		var t = $(this),
+			a = t.attr("data-learn-tab"),
+			i = $(a),
+			e = i.closest(".tab-element-content"),
+			o = t.closest(".circle-container");
+		e.find(".for-tab").removeClass("active"), o.find("[data-learn-tab]").removeClass("active"), t.addClass("active"), i.addClass("active"), e.find(".for-tab.start").hide()
+	}), $("[data-learn-tab]").on("mouseleave", function () {
+		var t = $(this),
+			a = t.attr("data-learn-tab"),
+			i = $(a),
+			e = i.closest(".tab-element-content");
+		t.closest(".circle-container");
+		t.removeClass("active"), i.removeClass("active"), e.find(".for-tab.start").show()
+	}))
 }
 
 learnTab();
